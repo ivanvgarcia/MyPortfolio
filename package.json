@@ -1,0 +1,17 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "A website to showcase all my projects",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Ivan Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
