@@ -86,7 +86,7 @@ body {
         transition: all .2s ease-in;
     }
     &__photo img:hover {
-        transform: scale(1.1) rotate(-5deg);
+        transform: scale(1.1);
     }
     &__heading {
         color: #000000;
@@ -239,7 +239,7 @@ body {
     border-radius: 10px;
     &__img {
         width: 100%;
-        transition: all .2s ease-in;
+        transition: all .3s ease-in .1s;
     }
     &__btn {
         position: absolute;

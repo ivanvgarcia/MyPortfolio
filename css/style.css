@@ -67,7 +67,7 @@ body {
     width: 200px;
     transition: all .2s ease-in; }
   .profile__photo img:hover {
-    transform: scale(1.1) rotate(-5deg); }
+    transform: scale(1.1); }
   .profile__heading {
     color: #000000;
     letter-spacing: 0.2px;
@@ -180,7 +180,7 @@ body {
   border-radius: 10px; }
   .project__img {
     width: 100%;
-    transition: all .2s ease-in; }
+    transition: all .3s ease-in .1s; }
   .project__btn {
     position: absolute;
     top: 50%;
