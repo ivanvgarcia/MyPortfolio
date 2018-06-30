@@ -3,9 +3,9 @@
     black-color: 
 */
 
-$primary-color: #16a085;
-$primary-color-light: #a5f3e3;
-$primary-color-dark: #159d82;
+$primary-color: #546de5;
+$primary-color-light: #778beb;
+$primary-color-dark: #334499;
 $secondary-color: #d0cdfe;
 $secondary-color-dark: #8a82fc;
 *,
@@ -23,7 +23,7 @@ html {
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px calc(100vh - 180px) 80px;
+    grid-template-rows: 100px calc(80vh - 80px);
     font-family: 'Josefin Slab', serif;
     font-weight: 400;
     line-height: 1.7;
@@ -33,180 +33,95 @@ body {
 
 .main-nav {
     grid-column: 1 / -1;
-    z-index: 10;
-    box-shadow: 0 1px 2px #000;
-    background-color: $primary-color;
-    display: flex;
-    justify-content: center;
     text-transform: uppercase;
     &__list {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
         list-style: none;
-        transform: translateY(-10px);
-        opacity: 0;
-        animation: 0.5s fadein 0.1s ease-in forwards;
+        align-items: center;
+        margin: 0 10rem;
+        padding-top: 2rem;
     }
-    &__item {
-        text-align: center;
+    &__logo {
+        width: 75px;
     }
     &__link:link,
     &__link:visited {
-        display: block;
-        width: 125px;
-        margin: 0 1rem;
-        padding: 1.1rem;
+        border: 2px solid $primary-color;
+        border-radius: 3rem;
+        color: $primary-color;
+        padding: 1.3rem;
         text-decoration: none;
         font-size: 1.6rem;
-        color: #fff;
+        font-weight: 600;
         transition: all 0.3s ease-in;
     }
     &__link:hover {
-        opacity: 0.9;
-        box-shadow: 2px 2px 1px #b8e994;
-        transition: all 0.2s ease-in;
-        background-color: white;
-        color: #000;
-    }
-    &__logo {
-        flex: 1 0 20%;
-        background-color: white;
-        padding: 1rem;
-        font-size: 2rem;
-        font-weight: 300;
-        transition: all 0.2s ease-out;
-        border-radius: .3rem;
-        box-shadow: 0 2px 2px #777;
-        backface-visibility: hidden;
+        background-color: $primary-color;
+        color: white;
     }
 }
 
 .profile {
-    background-color: #ccc;
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     &__details {
         background-color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
         &>* {
             margin-bottom: 20px;
         }
     }
     &__photo {
-        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 190px;
+        box-shadow: 5px 5px 1px $primary-color;
     }
     &__photo img {
-        width: 225px;
-        height: auto;
-        animation: magic 4s infinite;
+        width: 200px;
+        transition: all .2s ease-in;
     }
-    &__photo::before {
-        content: "Hi, Welcome!";
-        font-size: 20px;
-        background-color: red;
-        color: white;
-        padding: 10px;
-        border-radius: 4px;
-        position: absolute;
-        z-index: 1;
-        top: 0px;
-        left: 0px;
-        transform: rotate(-20deg);
-        opacity: 0;
-        transition: opacity 0.3s;
+    &__photo img:hover {
+        transform: scale(1.1) rotate(-5deg);
     }
-    &__photo:hover::before {
-        opacity: 1;
-    }
-    &__name,
-    &__tech-heading {
-        font-size: 35px;
-        letter-spacing: 1px;
-        color: #16a085;
-    }
-    &__description {
-        margin: 0 100px;
-        font-size: 22px;
+    &__heading {
+        color: #000000;
         letter-spacing: 0.2px;
-        line-height: 1.2;
+        line-height: 1.9;
         text-align: center;
-    }
-    &__tech-heading {
-        margin: 0 auto 6rem;
-        background-color: white;
-        border: .2rem solid $primary-color;
-        padding: .5rem 1rem;
-        box-shadow: 0 .3rem .4rem#686868;
-    }
-    &__name,
-    &__description,
-    &__tech-heading,
-    .skillbars {
-        opacity: 0;
-        animation: 1s bounce ease-in forwards;
-    }
-    &__skills {
-        background-image: linear-gradient( to bottom, rgba($secondary-color, 0.7), rgba(#000000, 0.7)), url("../img/img-1.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    &__languages {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__tech {
-        width: 64px;
-    }
-    &__tech:not(:last-of-type) {
-     
-    }
-    &__tech-name {
-        text-transform: uppercase;
-        color: #16a085;
-        background-color: #fff;
-        border-bottom: 5px solid #000000;
-        border-radius: 10px 10px 0 0;
-        padding: .5rem;
-        font-size: 2.2rem;
-        font-weight: 300;
-        
-        transition: all 0.2s ease-in;
-    }
-    &__tech-name:hover {
-        animation: swing 0.3s;
-        cursor: pointer;
-    }
-    &__tech i {
-        color: #fff;
-        font-size: 7rem;
-        transform-origin: center top;
-        animation: swing 2s ease-in-out infinite;
+        &-main,
+            {
+            color: $primary-color;
+        }
+        &-main,
+        &-sub {
+            font-size: 5rem;
+            font-weight: 300;
+        }
     }
 }
 
-.cta {
+.portfolio {
     grid-column: 1 / -1;
-    background-image: linear-gradient(90deg, #a29bfe 0%, #16a085 70%);
-    display: flex;
-    justify-content: center;
-    &__btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-image: linear-gradient(to right, $primary-color 0, $primary-color 50%, #596275 50%);
+    padding: 5rem 0;
+    &__heading {
         color: white;
-        text-transform: uppercase;
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
+        font-size: 4rem;
+        font-weight: 300;
+    }
+    &__details {
+        font-size: 2rem;
+        color: #fff;
+        width: 500px;
     }
 }
 
@@ -285,41 +200,83 @@ body {
     }
 }
 
-.section-portfolio {
+.container {}
+
+.section-projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10rem;
+    grid-template-columns: repeat(3, 1fr);
     grid-column: 1 / -1;
+    padding: 10rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    color: #ffffff;
+    background-color: $primary-color;
+    padding: 1.5rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border: none;
+    width: 15rem;
+    transition: background-color .3s ease-out,
+                opacity .3s ease-in .2s;
+}
+
+.btn:hover {
+    background-color: $primary-color-light;
+}
+
+.btn:active {
+    background-color: $primary-color-dark;
 }
 
 .project {
     position: relative;
     overflow: hidden;
+    height: 300px;
+    border-radius: 10px;
     &__img {
         width: 100%;
-        transition: all .3s .1s;
+        transition: all .2s ease-in;
     }
-    &__img:hover img {}
-    &__details {
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        cursor: pointer;
+    }
+    &__title {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(244, 180, 0, .8);
+        background-color: rgba(#596275, .95);
+        color: #fff;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         transition: all .3s;
+        font-size: 4rem;
+        font-weight: 100;
     }
     &__details:hover {}
 }
 
-.project:hover .project__details {
-    transform: scale(1);
+.project:hover .project__title {
+    top: -100%;
+}
+
+.project:hover .project__btn {
+    opacity: 1;
 }
 
 .project:hover .project__img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .skillbars {
@@ -328,7 +285,6 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
     }
     &__container {
         flex: 1;
@@ -338,7 +294,6 @@ body {
         border-radius: .4rem;
         margin-top: 10px;
         margin-left: 4rem;
-        
     }
     &__item:not(:last-of-type),
     &__container:not(:last-of-type) {

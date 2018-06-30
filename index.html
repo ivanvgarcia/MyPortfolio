@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700" rel="stylesheet">
 
     <title>Document</title>
 </head>
@@ -18,30 +18,11 @@
     <nav class="main-nav">
         <ul class="main-nav__list">
             <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
+                <img class="main-nav__logo" src="img/logo.jpg" alt="" srcset="">
             </li>
             <li class="main-nav__item">
                 <a href="#" class="main-nav__link">
-                    <i class="fas fa-user"></i>
-                    About
-                </a>
-            </li>
-            <li class="main-nav__item main-nav__logo">
-                Ivan Garcia
-            </li>
-            <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                    <i class="fas fa-address-card"></i>
-                    Contact
-                </a>
-            </li>
-            <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                    <i class="fas fa-pen-square"></i>
-                    Blog
+                    Get in touch
                 </a>
             </li>
         </ul>
@@ -49,121 +30,92 @@
 
     <section class="profile">
         <div class="profile__details">
+            <div class="profile__heading">
+                <h1 class="profile__heading-main">Hi, I'm Ivan</h1>
+                <h2 class="profile__heading-sub">Designer. Front End Developer. Teacher.</h2>
+            </div>
             <div class="profile__photo">
                 <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/28783092_10215798261853478_731229207325048832_n.jpg?_nc_cat=0&oh=530bb84522a3334896a3ffe367c7f67d&oe=5B66A7BC"
                     alt="">
             </div>
-            <h1 class="profile__name">Ivan Garcia
-            </h1>
-            <p class="profile__description">I'm a professional web designer and I use the latest web technologies to create fully responsive and aesthetically
-                pleasing websites.</p>
-        </div>
-
-        <div class="profile__skills">
-
-            <div class="skillbars">
-
-                <div class="skillbars__item">
-                    <div class="profile__tech">
-                        <i class="fab fa-html5"></i>
-
-                    </div>
-                    <div class="skillbars__container">
-                        <div class="skillbars__lang skillbars__lang--html">
-                            <span class="skillbars__percent">95%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skillbars__item">
-                    <div class="profile__tech">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="skillbars__container">
-                        <div class="skillbars__lang skillbars__lang--css">
-                            <span class="skillbars__percent">90%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skillbars__item">
-                    <div class="profile__tech">
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <div class="skillbars__container">
-                        <div class="skillbars__lang skillbars__lang--javascript">
-                            <span class="skillbars__percent">70%</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- <h2 class="profile__tech-heading">Experienced with</h2>
-            <div class="profile__languages">
-                <div class="profile__tech profile__tech--left">
-                    <i class="fab fa-html5"></i>
-                    <span class="profile__tech-name">Html5</span>
-                </div>
-                <div class="profile__tech profile__tech--right">
-                    <i class="fab fa-css3-alt"></i>
-                    <span class="profile__tech-name">CSS3</span>
-                </div>
-                <div class="profile__tech profile__tech--left">
-                    <i class="fab fa-js-square"></i>
-                    <span class="profile__tech-name">JavaScript</span>
-                </div>
-            </div> -->
-
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta__btn">
+    <section class="portfolio">
+        <div class="portfolio__heading">
             My Portfolio
         </div>
+        <div class="portfolio__details">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            book.
+        </div>
     </section>
 
-    <section class="section-portfolio">
+    <section class="section-projects">
 
         <div class="project project-1">
-            <img class="project__img" src="http://www.wimaxxed.com/wp-content/uploads/2018/04/Website.jpg" alt="">
             <div class="project__details">
-                Project 1
+                <img class="project__img" src="img/project-1.jpg" alt="">
+                <button class="btn project__btn">
+                    Visit Website
+                    <span class="project__btn-icon">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="project__title">
+                Flow Gengo
             </div>
         </div>
 
         <div class="project project-1">
-            <img class="project__img" src="http://www.wimaxxed.com/wp-content/uploads/2018/04/Website.jpg" alt="">
             <div class="project__details">
-                Project 1
+                <img class="project__img" src="img/project-2.png" alt="">
+                <button class="btn project__btn">
+                    Visit Website
+                    <span class="project__btn-icon">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="project__title">
+                Panda Trip
             </div>
         </div>
 
         <div class="project project-1">
-            <img class="project__img" src="http://www.wimaxxed.com/wp-content/uploads/2018/04/Website.jpg" alt="">
             <div class="project__details">
-                Project 1
+                <img class="project__img" src="img/project-3.jpg" alt="">
+                <button class="btn project__btn">
+                    Visit Website
+                    <span class="project__btn-icon">
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="project__title">
+                Nexter
             </div>
         </div>
 
         <div class="project project-1">
-            <img class="project__img" src="http://www.wimaxxed.com/wp-content/uploads/2018/04/Website.jpg" alt="">
+            <img class="project__img" src="img/project-2.png" alt="">
             <div class="project__details">
-                Project 1
+                Panda Trip
+            </div>
+        </div>
+
+        <div class="project project-1">
+            <img class="project__img" src="img/project-3.jpg" alt="">
+            <div class="project__details">
+                Nexter
             </div>
         </div>
 
 
     </section>
 
-    </section>
 
 </body>
 
