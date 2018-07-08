@@ -1,6 +1,17 @@
+.u-margin-top-bottom {
+  margin: 4rem 0; }
+
 /*
-    grey-color: #777777;
-    black-color: 
+0 - 600PX: PHONE
+600 - 900PX: TABLET PORTRAIT
+900 - 1200PX: TABLET LANDSCAPE
+*/
+/*
+$BREAKPOINT ARGUMENT CHOICES:
+- phone
+- tab-port
+- tab-land 
+- desktop
 */
 *,
 *::before,
@@ -11,6 +22,12 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   display: grid;
@@ -32,7 +49,7 @@ select {
   padding: .7rem;
   margin: 1rem 0;
   border: none;
-  border-bottom: .2rem solid #f8a5c2;
+  border-bottom: 0.2rem solid #f8a5c2;
   width: 100%; }
 
 input[type="submit"] {
@@ -43,7 +60,7 @@ input[type="submit"] {
 
 textarea {
   border: none;
-  border-bottom: .2rem solid #f8a5c2; }
+  border-bottom: 0.2rem solid #f8a5c2; }
 
 input:focus,
 select:focus,
@@ -63,7 +80,7 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #000; }
 
 option:not(:checked) {
-  color: #000000;
+  color: #272727;
   /* prevent <option>s from becoming transparent as well */ }
 
 .main-nav {
@@ -79,8 +96,14 @@ option:not(:checked) {
     opacity: 0;
     transform: translateY(-40px);
     animation: fadein 1s forwards; }
+    @media (max-width: 37.5em) {
+      .main-nav__list {
+        margin: 0 3rem; } }
   .main-nav__logo {
-    width: 75px; }
+    width: 7.5rem; }
+    @media (max-width: 37.5em) {
+      .main-nav__logo {
+        width: 7rem; } }
   .main-nav__link:link, .main-nav__link:visited {
     border: 2px solid #546de5;
     border-radius: 3rem;
@@ -90,6 +113,9 @@ option:not(:checked) {
     font-size: 1.6rem;
     font-weight: 600;
     transition: all 0.1s ease-in; }
+    @media (max-width: 37.5em) {
+      .main-nav__link:link, .main-nav__link:visited {
+        border: 1px solid #546de5; } }
   .main-nav__link:hover {
     background-color: #546de5;
     color: white; }
@@ -106,21 +132,27 @@ option:not(:checked) {
     .profile__details > * {
       margin-bottom: 20px; }
   .profile__photo {
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    height: 190px;
-    box-shadow: 5px 5px 1px #546de5;
+    height: 19rem;
     opacity: 0;
     transform: translateY(-40px);
     transition: box-shadow .2s ease-out;
     animation: fadein 1s forwards; }
+    @media (max-width: 37.5em) {
+      .profile__photo {
+        margin-top: 4rem;
+        height: 18rem; } }
   .profile__photo img {
-    width: 200px;
+    width: 20rem;
     transition: all .2s ease-in; }
+    @media (max-width: 37.5em) {
+      .profile__photo img {
+        width: 18rem; } }
   .profile__photo img:hover {
     transform: scale(1.1) rotate(-6deg); }
   .profile__heading {
-    color: #000000;
+    color: #272727;
     letter-spacing: 0.2px;
     line-height: 1.9;
     text-align: center;
@@ -132,6 +164,9 @@ option:not(:checked) {
     .profile__heading-main, .profile__heading-sub {
       font-size: 5rem;
       font-weight: 300; }
+      @media (max-width: 37.5em) {
+        .profile__heading-main, .profile__heading-sub {
+          font-size: 4rem; } }
 
 .portfolio {
   grid-column: 1 / -1; }
@@ -140,10 +175,13 @@ option:not(:checked) {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    background-image: linear-gradient(to right, #546de5 0, #546de5 50%, #596275 50%);
+    background-image: linear-gradient(115deg, #546de5 0, #546de5 50%, #596275 50%);
     padding: 5rem 0; }
+    @media (max-width: 37.5em) {
+      .portfolio__header {
+        grid-template-columns: 1fr; } }
   .portfolio__heading {
-    color: white;
+    color: #fff;
     font-size: 4rem;
     font-weight: 300; }
   .portfolio__details {
@@ -152,18 +190,27 @@ option:not(:checked) {
     width: 500px; }
 
 .projects {
+  grid-column: 1 / -1;
   display: grid;
   grid-gap: 5rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-column: 1 / -1;
   max-width: 120rem;
   margin: 10rem auto; }
+  @media (max-width: 75em) {
+    .projects {
+      max-width: 100rem; } }
+  @media (max-width: 37.5em) {
+    .projects {
+      grid-template-columns: 1fr; } }
 
 .project {
   position: relative;
   overflow: hidden;
   height: 300px;
   border-radius: 10px; }
+  @media (max-width: 37.5em) {
+    .project {
+      border-radius: 0; } }
   .project__img {
     width: 100%;
     transition: all .3s ease-in .1s; }
@@ -174,11 +221,11 @@ option:not(:checked) {
     transform: translate(-50%, -50%);
     opacity: 0;
     cursor: pointer; }
-  .project__title {
+  .project__overlay {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(-90deg, #546de5, #596275);
+    background-image: linear-gradient(-90deg, rgba(84, 109, 229, 0.8), rgba(89, 98, 117, 0.8));
     color: #fff;
     position: absolute;
     top: 0;
@@ -189,7 +236,7 @@ option:not(:checked) {
     font-size: 4rem;
     font-weight: 100; }
 
-.project:hover .project__title {
+.project:hover .project__overlay {
   top: -100%; }
 
 .project:hover .project__btn {
@@ -268,8 +315,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.8rem;
-  padding: 6rem 0; }
+  font-size: 1.8rem; }
   footer > *:not(:last-child) {
     margin-bottom: 4rem; }
 
@@ -293,50 +339,3 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
-@keyframes bounce {
-  0% {
-    transform: scale(0);
-    opacity: 0; }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.4; }
-  75% {
-    transform: scale(0.9);
-    opacity: 0.7; }
-  100% {
-    transform: scale(1);
-    opacity: 1; } }
-
-@keyframes swing {
-  0% {
-    transform: rotate(10deg); }
-  50% {
-    transform: rotate(-5deg); }
-  100% {
-    transform: rotate(10deg); } }
-
-@keyframes fadeInRight {
-  100% {
-    opacity: 1;
-    transform: translateX(0) rotate(360deg); } }
-
-@keyframes magic {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
-  20% {
-    -webkit-clip-path: polygon(28% 0, 73% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(28% 0, 73% 0, 100% 100%, 0% 100%); }
-  40% {
-    -webkit-clip-path: polygon(0 0, 100% 72%, 100% 100%, 0 35%);
-    clip-path: polygon(0 0, 100% 72%, 100% 100%, 0 35%); }
-  60% {
-    -webkit-clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%); }
-  80% {
-    -webkit-clip-path: polygon(0 70%, 100% 0, 100% 32%, 0 100%);
-    clip-path: polygon(0 70%, 100% 0, 100% 32%, 0 100%); }
-  100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }

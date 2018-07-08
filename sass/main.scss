@@ -1,13 +1,44 @@
-/*
-    grey-color: #777777;
-    black-color: 
-*/
-
+// COLORS
 $primary-color: #546de5;
 $primary-color-light: #778beb;
 $primary-color-dark: #334499;
-$secondary-color: #d0cdfe;
+$secondary-color: #f8a5c2;
 $secondary-color-dark: #8a82fc;
+$grey-color: #596275;
+$grey-color-dark: #272727;
+
+// UTILITY CLASSES
+
+.u-margin-top-bottom { margin: 4rem 0 };
+
+// MIXINS
+
+/*
+0 - 600PX: PHONE
+600 - 900PX: TABLET PORTRAIT
+900 - 1200PX: TABLET LANDSCAPE
+*/
+
+/*
+$BREAKPOINT ARGUMENT CHOICES:
+- phone
+- tab-port
+- tab-land 
+- desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; //600px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; //900px
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -18,6 +49,13 @@ $secondary-color-dark: #8a82fc;
 
 html {
     font-size: 62.5%;
+    
+    @include respond(desktop) {
+        font-size: 56.25%;
+    }
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -42,7 +80,7 @@ select,
     padding: .7rem;
     margin: 1rem 0;
     border: none;
-    border-bottom: .2rem solid #f8a5c2;
+    border-bottom: .2rem solid $secondary-color;
     width: 100%;
 }
 
@@ -55,7 +93,7 @@ input[type="submit"] {
 
 textarea {
     border: none;
-    border-bottom: .2rem solid #f8a5c2;
+    border-bottom: .2rem solid $secondary-color;
 }
 
 input:focus,
@@ -80,7 +118,7 @@ select:-moz-focusring {
 }
 
 option:not(:checked) {
-    color: #000000;
+    color: $grey-color-dark;
     /* prevent <option>s from becoming transparent as well */
 }
 
@@ -97,9 +135,15 @@ option:not(:checked) {
         opacity: 0;
         transform: translateY(-40px);
         animation: fadein 1s forwards;
+        @include respond(phone) {
+            margin: 0 3rem;
+        }
     }
     &__logo {
-        width: 75px;
+        width: 7.5rem;
+        @include respond(phone) {
+            width: 7rem;
+        }
     }
     &__link:link,
     &__link:visited {
@@ -111,6 +155,9 @@ option:not(:checked) {
         font-size: 1.6rem;
         font-weight: 600;
         transition: all 0.1s ease-in;
+        @include respond(phone) {
+            border: 1px solid $primary-color
+        }
     }
     &__link:hover {
         background-color: $primary-color;
@@ -132,24 +179,30 @@ option:not(:checked) {
         }
     }
     &__photo {
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: hidden;
-        height: 190px;
-        box-shadow: 5px 5px 1px $primary-color;
+        height: 19rem;
         opacity: 0;
         transform: translateY(-40px);
         transition: box-shadow .2s ease-out;
         animation: fadein 1s forwards; //group nav, head, photo animation
+        @include respond(phone) {
+            margin-top: 4rem;
+            height: 18rem;
+        }
     }
     &__photo img {
-        width: 200px;
+        width: 20rem;
         transition: all .2s ease-in;
+        @include respond(phone) {
+            width: 18rem;
+        }
     }
     &__photo img:hover {
         transform: scale(1.1) rotate(-6deg);
     }
     &__heading {
-        color: #000000;
+        color: $grey-color-dark;
         letter-spacing: 0.2px;
         line-height: 1.9;
         text-align: center;
@@ -164,6 +217,9 @@ option:not(:checked) {
         &-sub {
             font-size: 5rem;
             font-weight: 300;
+            @include respond(phone) {
+                font-size: 4rem;
+            }
         }
     }
 }
@@ -175,11 +231,14 @@ option:not(:checked) {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         align-items: center;
-        background-image: linear-gradient(to right, $primary-color 0, $primary-color 50%, #596275 50%);
+        background-image: linear-gradient(115deg, $primary-color 0, $primary-color 50%, $grey-color 50%);
         padding: 5rem 0;
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
     }
     &__heading {
-        color: white;
+        color: #fff;
         font-size: 4rem;
         font-weight: 300;
     }
@@ -191,12 +250,18 @@ option:not(:checked) {
 }
 
 .projects {
+    grid-column: 1 / -1;
     display: grid;
     grid-gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-column: 1 / -1;
     max-width: 120rem;
     margin: 10rem auto;
+    @include respond(desktop) {
+        max-width: 100rem;
+    }
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project {
@@ -204,6 +269,9 @@ option:not(:checked) {
     overflow: hidden;
     height: 300px;
     border-radius: 10px;
+    @include respond(phone) {
+        border-radius: 0;
+    }
     &__img {
         width: 100%;
         transition: all .3s ease-in .1s;
@@ -216,11 +284,11 @@ option:not(:checked) {
         opacity: 0;
         cursor: pointer;
     }
-    &__title {
+    &__overlay {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(-90deg, $primary-color, #596275);
+        background-image: linear-gradient(-90deg, rgba($primary-color, .8), rgba($grey-color, .8));
         color: #fff;
         position: absolute;
         top: 0;
@@ -234,7 +302,7 @@ option:not(:checked) {
     &__details:hover {}
 }
 
-.project:hover .project__title {
+.project:hover .project__overlay {
     top: -100%;
 }
 
@@ -329,7 +397,6 @@ footer {
     flex-direction: column;
     align-items: center;
     font-size: 1.8rem;
-    padding: 6rem 0;
     &>*:not(:last-child) {
         margin-bottom: 4rem;
     }
@@ -363,70 +430,5 @@ footer {
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.4;
-    }
-    75% {
-        transform: scale(0.9);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes swing {
-    0% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes fadeInRight {
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(360deg);
-    }
-}
-
-@keyframes magic {
-    0% {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    20% {
-        -webkit-clip-path: polygon(28% 0, 73% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(28% 0, 73% 0, 100% 100%, 0% 100%);
-    }
-    40% {
-        -webkit-clip-path: polygon(0 0, 100% 72%, 100% 100%, 0 35%);
-        clip-path: polygon(0 0, 100% 72%, 100% 100%, 0 35%);
-    }
-    60% {
-        -webkit-clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    }
-    80% {
-        -webkit-clip-path: polygon(0 70%, 100% 0, 100% 32%, 0 100%);
-        clip-path: polygon(0 70%, 100% 0, 100% 32%, 0 100%);
-    }
-    100% {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
