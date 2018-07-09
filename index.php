@@ -10,6 +10,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
 
     <title>Ivan Garcia</title>
 </head>
@@ -55,13 +66,13 @@
         <div class="projects">
             <div class="project">
                 <div class="project__details">
-                    <img class="project__img" src="img/project-1.jpg" alt="">
-                    <button class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </button>
+                    <img class="project__img" src="img/project-1.png" alt="project 1">
+                    <a href="https://ivanvgarcia.github.io/Flow-Gengo/" target="_blank" class="btn project__btn">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                    </a>
                 </div>
                 <div class="project__overlay">
                     Flow Gengo
@@ -70,13 +81,43 @@
 
             <div class="project">
                 <div class="project__details">
-                    <img class="project__img" src="img/project-2.png" alt="">
-                    <button class="btn project__btn">
+                    <img class="project__img" src="img/project-2.jpg" alt="project 2">
+                    <a href="https://ivanvgarcia.github.io/NYC-Tours-Project/" target="_blank" class="btn project__btn">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="project__overlay">
+                    NYC Tours
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project__details">
+                    <img class="project__img" src="img/project-3.png" alt="project 3">
+                    <a href="https://ivanvgarcia.github.io/Nexter/" target="_blank" class="btn project__btn">
                         Visit Website
                         <span class="project__btn-icon">
                             <i class="fas fa-angle-right"></i>
                         </span>
-                    </button>
+                    </a>
+                </div>
+                <div class="project__overlay">
+                    Nexter
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project__details">
+                    <img class="project__img" src="img/project-4.png" alt="project 4">
+                    <a href="https://ivanvgarcia.github.io/Panda-Trip/" target="_blank" class="btn project__btn">
+                        Visit Website
+                        <span class="project__btn-icon">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                    </a>
                 </div>
                 <div class="project__overlay">
                     Panda Trip
@@ -85,24 +126,38 @@
 
             <div class="project">
                 <div class="project__details">
-                    <img class="project__img" src="img/project-3.jpg" alt="">
-                    <button class="btn project__btn">
+                    <img class="project__img" src="img/project-5.png" alt="project 5">
+                    <a href="https://ivanvgarcia.github.io/RGB-Guessing-Game/" target="_blank" class="btn project__btn">
                         Visit Website
                         <span class="project__btn-icon">
                             <i class="fas fa-angle-right"></i>
                         </span>
-                    </button>
+                    </a>
                 </div>
                 <div class="project__overlay">
-                    Nexter
+                    RGB Color Game
                 </div>
             </div>
 
-            
+            <div class="project">
+                <div class="project__details">
+                    <img class="project__img" src="img/project-6.png" alt="project six">
+                    <a href="https://ivanvgarcia.github.io/Bitcoin/" target="_blank" class="btn project__btn">
+                        Visit Website
+                        <span class="project__btn-icon">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
+                        </button>
+                    </a>
+                </div>
+                <div class="project__overlay">
+                    Bitcoin Price
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section-contact u-margin-top-bottom">
+    <section class="section-contact u-margin-top-bottom" id="form">
         <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
                 <source src="img/Workaholic.mp4" type="video/mp4">
@@ -112,8 +167,17 @@
         <div class="section-contact__header">
             Interested in working together?
         </div>
+        <?php
+            if($_GET['success'] == 1) {
+                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+            }
+            if($_GET['success'] == -1) {
+                echo "<div class=\"form-messages error\">Oh no! Something went wrong. Please try again.</div>";
+            }
+        ?>
         <div class="contact-form">
-            <form action="#" method="post" class="contact-form__content">
+            
+            <form action="./mailer-new.php" method="POST" class="contact-form__content">
                 <div class="contact-form__label">
                     <label for="name">Name</label>
                 </div>
@@ -164,7 +228,7 @@
                     </label>
                 </div>
                 <div class="contact-form__input">
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="40" rows="10"></textarea>
                 </div>
                 <div class="contact-form__btn">
                     <input type="submit" value="Submit" class="btn">
@@ -179,17 +243,17 @@
         </div>
         <div class=social-media>
             <div class="social-media__icon">
-                <a href="www.linkedin.com">
+                <a href="https://github.com/ivanvgarcia" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
             <div class="social-media__icon">
-                <a href="www.linkedin.com">
+                <a href="https://www.linkedin.com/in/ivan-garcia-64880651/" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
             <div class="social-media__icon">
-                <a href="www.linkedin.com">
+                <a href="mailto:ivanvlora@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -198,7 +262,14 @@
             Handcrafted by Ivan Garcia.
         </div>
     </footer>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121998830-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121998830-1');
+    </script>
 </body>
 
 </html>
