@@ -8,7 +8,7 @@
     <meta name="description" content="Ivan Garcia's portfolio website where he showcases his web design and development projects using HTML, CSS, JavaScript, Node.js and other technologies.">
     <meta name="keywords" content="web designer, portfolio, ivan garcia, freelance, web developer">
     <meta name="author" content="Ivan Garcia">
-    
+
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
@@ -33,7 +33,9 @@
     <nav class="main-nav">
         <ul class="main-nav__list">
             <li class="main-nav__item">
-                <img class="main-nav__logo" src="img/logo.jpg" alt="logo image">
+                <a href="https://www.ivanvgarcia.com">
+                    <img class="main-nav__logo" src="img/logo.jpg" alt="logo image">
+                </a>
             </li>
             <li class="main-nav__item">
                 <a href="#" class="main-nav__link">
@@ -50,8 +52,9 @@
                 <h2 class="profile__heading-sub">Designer. Front End Developer. Teacher.</h2>
             </div>
             <div class="profile__photo">
-                <img src="img/Ivan-min.jpg"
-                    alt="photo of Ivan">
+                <a href="https://www.ivanvgarcia.com">
+                    <img src="img/Ivan-min.jpg" alt="photo of Ivan">
+                </a>
             </div>
         </div>
     </section>
@@ -72,10 +75,10 @@
                 <div class="project__details">
                     <img class="project__img" src="img/project-1.png" alt="project 1">
                     <a href="https://ivanvgarcia.github.io/Flow-Gengo/" target="_blank" class="btn project__btn">
-                            Visit Website
-                            <span class="project__btn-icon">
-                                <i class="fas fa-angle-right"></i>
-                            </span>
+                        Visit Website
+                        <span class="project__btn-icon">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
                     </a>
                 </div>
                 <div class="project__overlay">
@@ -87,10 +90,10 @@
                 <div class="project__details">
                     <img class="project__img" src="img/project-2.jpg" alt="project 2">
                     <a href="https://ivanvgarcia.github.io/NYC-Tours-Project/" target="_blank" class="btn project__btn">
-                            Visit Website
-                            <span class="project__btn-icon">
-                                <i class="fas fa-angle-right"></i>
-                            </span>
+                        Visit Website
+                        <span class="project__btn-icon">
+                            <i class="fas fa-angle-right"></i>
+                        </span>
                     </a>
                 </div>
                 <div class="project__overlay">
@@ -178,66 +181,66 @@
                 echo "<div class=\"form-messages error\">Oh no! Something went wrong. Please try again.</div>";
             }
         ?>
-        <div class="contact-form">
-            
-            <form action="./mailer-new.php" method="POST" class="contact-form__content">
-                <div class="contact-form__label">
-                    <label for="name">Name</label>
-                </div>
-                <div class="name">
-                    <input type="text" name="name" id="name" placeholder="Your name" class="contact-form__input" required>
-                </div>
-                <div class="contact-form__label">
-                    <label for="email">Email</label>
-                </div>
-                <div class="">
-                    <input type="text" name="email" id="email" placeholder="Your email" class="contact-form__input" required>
-                </div>
-                <div class="contact-form__label">
-                    <label for="project-type">Type of Project</label>
-                </div>
-                <div class="project-type">
-                    <select name="project-type" id="project-type" class="contact-form__select">
-                        <option value="web-design" selected>
-                            Web Design
-                        </option>
-                        <option value="web-design">
-                            Web Application
-                        </option>
-                        <option value="web-design">
-                            Other
-                        </option>
-                    </select>
-                </div>
-                <div class="contact-form__label">
-                    <label for="budget">Budget</label>
-                </div>
-                <div>
-                    <select name="budget" id="budget" class="contact-form__select">
-                        <option value="low-budget">
-                            $300 - $600 USD
-                        </option>
-                        <option value="med-budget">
-                            $600 - $1000 USD
-                        </option>
-                        <option value="high-budget">
-                            $1000 - $2000+ USD
-                        </option>
-                    </select>
-                </div>
-                <div class="contact-form__label">
-                    <label for="message">
-                        Additional Details
-                    </label>
-                </div>
-                <div class="contact-form__input">
-                    <textarea name="message" id="message" cols="40" rows="10"></textarea>
-                </div>
-                <div class="contact-form__btn">
-                    <input type="submit" value="Submit" class="btn">
-                </div>
-            </form>
-        </div>
+            <div class="contact-form">
+
+                <form action="./mailer-new.php" method="POST" class="contact-form__content">
+                    <div class="contact-form__label">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Your name" class="contact-form__input" required>
+                    </div>
+                    <div class="contact-form__label">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="">
+                        <input type="text" name="email" id="email" placeholder="Your email" class="contact-form__input" required>
+                    </div>
+                    <div class="contact-form__label">
+                        <label for="project-type">Type of Project</label>
+                    </div>
+                    <div class="project-type">
+                        <select name="project-type" id="project-type" class="contact-form__select">
+                            <option value="web-design" selected>
+                                Web Design
+                            </option>
+                            <option value="web-design">
+                                Web Application
+                            </option>
+                            <option value="web-design">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+                    <div class="contact-form__label">
+                        <label for="budget">Budget</label>
+                    </div>
+                    <div>
+                        <select name="budget" id="budget" class="contact-form__select">
+                            <option value="low-budget">
+                                $300 - $600 USD
+                            </option>
+                            <option value="med-budget">
+                                $600 - $1000 USD
+                            </option>
+                            <option value="high-budget">
+                                $1000 - $2000+ USD
+                            </option>
+                        </select>
+                    </div>
+                    <div class="contact-form__label">
+                        <label for="message">
+                            Additional Details
+                        </label>
+                    </div>
+                    <div class="contact-form__input">
+                        <textarea name="message" id="message" cols="40" rows="10"></textarea>
+                    </div>
+                    <div class="contact-form__btn">
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                </form>
+            </div>
     </section>
 
     <footer class="u-margin-top-bottom">
@@ -269,7 +272,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121998830-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-121998830-1');
     </script>
