@@ -143,19 +143,19 @@ option:not(:checked) {
     animation: fadein 1s forwards; }
     @media (max-width: 37.5em) {
       .profile__photo {
-        margin-top: 4rem; } }
+        margin-top: 4rem;
+        height: 18rem; } }
   .profile__photo img {
     width: 20rem;
-    transition: all .2s ease-in;
-    transform: scale(1.1) rotate(0); }
+    transition: all .2s ease-in; }
     @media (max-width: 56.25em) {
       .profile__photo img {
         width: 17rem; } }
     @media (max-width: 37.5em) {
       .profile__photo img {
-        width: 18rem; } }
+        width: 15rem; } }
   .profile__photo img:hover {
-    transform: scale(1.2) rotate(-6deg); }
+    transform: scale(1.1) rotate(-6deg); }
   .profile__heading {
     color: #272727;
     letter-spacing: 0.2px;
@@ -166,9 +166,6 @@ option:not(:checked) {
     animation: fadein 1s forwards; }
     .profile__heading-main {
       color: #546de5; }
-      @media (max-width: 37.5em) {
-        .profile__heading-main {
-          font-size: 5.5rem !important; } }
     .profile__heading-main, .profile__heading-sub {
       font-size: 5rem;
       font-weight: 300; }
@@ -177,7 +174,7 @@ option:not(:checked) {
           font-size: 4.5rem; } }
       @media (max-width: 37.5em) {
         .profile__heading-main, .profile__heading-sub {
-          font-size: 3.5rem; } }
+          font-size: 3rem; } }
 
 .portfolio {
   grid-column: 1 / -1; }

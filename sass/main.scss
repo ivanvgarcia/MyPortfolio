@@ -198,21 +198,22 @@ option:not(:checked) {
         animation: fadein 1s forwards; //group nav, head, photo animation
         @include respond(phone) {
             margin-top: 4rem;
-            height: 18rem;
+  
         }
     }
     &__photo img {
         width: 20rem;
         transition: all .2s ease-in;
+        transform: scale(1.1) rotate(0);
         @include respond(tab-port) {
             width: 17rem;
         }
         @include respond(phone) {
-            width: 15rem;
+            width: 18rem;
         }
     }
     &__photo img:hover {
-        transform: scale(1.1) rotate(-6deg);
+        transform: scale(1.2) rotate(-6deg);
     }
     &__heading {
         color: $grey-color-dark;
@@ -222,9 +223,11 @@ option:not(:checked) {
         opacity: 0;
         transform: translateY(-40px);
         animation: fadein 1s forwards;
-        &-main,
-            {
+        &-main {
             color: $primary-color;
+            @include respond(phone) {
+                font-size: 5.5rem !important;
+            }
         }
         &-main,
         &-sub {
@@ -234,7 +237,7 @@ option:not(:checked) {
                 font-size: 4.5rem;
             }
             @include respond(phone) {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
         }
     }

@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Ivan Garcia's portfolio website where he showcases his web design and development projects using HTML, CSS, JavaScript, Node.js and other technologies.">
+    <meta name="keywords" content="web designer, portfolio, ivan garcia, freelance, web developer">
+    <meta name="author" content="Ivan Garcia">
+    
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
@@ -46,8 +50,8 @@
                 <h2 class="profile__heading-sub">Designer. Front End Developer. Teacher.</h2>
             </div>
             <div class="profile__photo">
-                <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/28783092_10215798261853478_731229207325048832_n.jpg?_nc_cat=0&oh=530bb84522a3334896a3ffe367c7f67d&oe=5B66A7BC"
-                    alt="">
+                <img src="img/Ivan-min.jpg"
+                    alt="photo of Ivan">
             </div>
         </div>
     </section>
@@ -147,7 +151,6 @@
                         <span class="project__btn-icon">
                             <i class="fas fa-angle-right"></i>
                         </span>
-                        </button>
                     </a>
                 </div>
                 <div class="project__overlay">
@@ -164,9 +167,9 @@
                 <source src="img/Workaholic.webm" type="video/webm"> Your browser is not supported!
             </video>
         </div>
-        <div class="section-contact__header">
+        <h2 class="section-contact__header">
             Interested in working together?
-        </div>
+        </h2>
         <?php
             if($_GET['success'] == 1) {
                 echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
