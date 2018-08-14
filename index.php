@@ -65,8 +65,8 @@
                 My Portfolio
             </h2>
             <div class="portfolio__details">
-                When creating websites, my focus is on clean and simple design. I feel it is essential to use your online presence to convey
-                what your service or product is about. Check out some of my work!
+                Creating websites with a focus on clean and simple design. I help my clients use their online presence to convey what their
+                service or product is about. Check out some of my work below!
             </div>
         </div>
 
@@ -74,12 +74,20 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-1.png" alt="project 1">
-                    <a href="https://ivanvgarcia.github.io/Flow-Gengo/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/Flow-Gengo/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/Flow-Gengo" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="project__overlay">
                     Flow Gengo
@@ -89,12 +97,20 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-2.jpg" alt="project 2">
-                    <a href="https://ivanvgarcia.github.io/NYC-Tours-Project/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/NYC-Tours-Project/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/NYC-Tours-Project" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="project__overlay">
                     NYC Tours
@@ -104,12 +120,20 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-3.png" alt="project 3">
-                    <a href="https://ivanvgarcia.github.io/Nexter/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/Nexter/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/Nexter" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="project__overlay">
                     Nexter
@@ -119,12 +143,21 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-4.png" alt="project 4">
-                    <a href="https://ivanvgarcia.github.io/Panda-Trip/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/Panda-Trip/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/Panda-Trip" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
+
                 </div>
                 <div class="project__overlay">
                     Panda Trip
@@ -134,12 +167,20 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-5.png" alt="project 5">
-                    <a href="https://ivanvgarcia.github.io/RGB-Guessing-Game/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/RGB-Guessing-Game/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/RGB-Guessing-Game" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="project__overlay">
                     RGB Color Game
@@ -149,12 +190,20 @@
             <div class="project">
                 <div class="project__details">
                     <img class="project__img" src="img/project-6.png" alt="project six">
-                    <a href="https://ivanvgarcia.github.io/Bitcoin/" target="_blank" class="btn project__btn">
-                        Visit Website
-                        <span class="project__btn-icon">
-                            <i class="fas fa-angle-right"></i>
-                        </span>
-                    </a>
+                    <div class="project__buttons">
+                        <a href="https://ivanvgarcia.github.io/Bitcoin/" target="_blank" class="project__btn project__btn--primary">
+                            Visit Website
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/ivanvgarcia/Bitcoin" target="_blank" class="project__btn project__btn--secondary">
+                            Source code
+                            <span class="project__btn-icon">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="project__overlay">
                     Bitcoin Price

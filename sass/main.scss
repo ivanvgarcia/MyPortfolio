@@ -2,8 +2,8 @@
 $primary-color: #546de5;
 $primary-color-light: #778beb;
 $primary-color-dark: #334499;
-$secondary-color: #f8a5c2;
-$secondary-color-dark: #8a82fc;
+$secondary-color: #00bcd4;
+$secondary-color-dark: #0e9eb1;
 $grey-color: #596275;
 $grey-color-dark: #272727;
 // UTILITY CLASSES
@@ -199,7 +199,6 @@ option:not(:checked) {
         animation: fadein 1s forwards; //group nav, head, photo animation
         @include respond(phone) {
             margin-top: 4rem;
-  
         }
     }
     &__photo img {
@@ -263,8 +262,8 @@ option:not(:checked) {
     }
     &__heading {
         color: #fff;
-        font-size: 4rem;
         font-weight: 300;
+        font-size: 6rem;
     }
     &__details {
         font-size: 2rem;
@@ -275,6 +274,7 @@ option:not(:checked) {
         }
         @include respond(phone) {
             padding: 3rem 0;
+            font-size: 2rem;
         }
     }
 }
@@ -287,13 +287,16 @@ option:not(:checked) {
     margin: 10rem auto;
     @include respond(desktop) {
         max-width: 100rem;
+        grid-gap: 3rem;
     }
     @include respond(tab-port) {
         grid-template-columns: repeat(2, 1fr);
         max-width: 70rem;
+        grid-gap: 6rem;
     }
     @include respond(phone) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 95%;
+        justify-content: center;
     }
 }
 
@@ -301,25 +304,65 @@ option:not(:checked) {
     position: relative;
     overflow: hidden;
     border-radius: .3rem;
+    box-shadow: 6px 5px 0 $grey-color, 10px 10px 0 $grey-color-dark;
+    transition: all .2s ease-out;
     @include respond(tab-port) {
         border-radius: .3rem;
+    }
+    @include respond(phone) {
+        box-shadow: none;
+        border-radius: none;
     }
     &__img {
         width: 100%;
         transform: scale(1.05);
         transition: all .3s ease-in .1s;
     }
-    &__btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__buttons {
+        display: flex;
         opacity: 0;
-        cursor: pointer;
+        transition: .3s ease-in-out;
+        transform: translateY(100px);
         @include respond(phone) {
             opacity: 1;
-            z-index: 1;
-            top: 70%;
+            transform: translateY(0);
+            z-index: 99;
+        }
+    }
+    &__btn {
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
+        z-index: 99;
+        padding: 2rem;
+        cursor: pointer;
+        &--primary {
+            background-color: $primary-color;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            transition: background-color .3s ease-in-out;
+        }
+        &--secondary {
+            background-color: $secondary-color;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            transition: background-color .3s ease-in-out;
+        }
+        &--primary:hover {
+            background-color: $primary-color-dark;
+        }
+        &--secondary:hover {
+            background-color: $secondary-color-dark;
+        }
+        @include respond(desktop) {
+            font-size: 1.6rem;
+        }
+        @include respond(phone) {
+            font-size: 2rem;
         }
     }
     &__overlay {
@@ -337,10 +380,20 @@ option:not(:checked) {
         font-size: 4rem;
         font-weight: 100;
         @include respond(phone) {
-            background-image: linear-gradient(0deg, rgba($grey-color, .9), rgba($grey-color, .9));
+            background-image: linear-gradient(0deg, rgba($grey-color, .8), rgba($grey-color, .8));
+            font-size: 5rem;
         }
     }
     &__details:hover {}
+}
+
+.project:hover {
+    box-shadow: 1px 1px 1px $grey-color;
+    transform: translateX(10px) translateY(10px);
+    @include respond(phone) {
+        transform: none;
+        box-shadow: none;
+    }
 }
 
 .project:hover .project__overlay {
@@ -350,8 +403,9 @@ option:not(:checked) {
     }
 }
 
-.project:hover .project__btn {
+.project:hover .project__buttons {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .project:hover .project__img {
@@ -386,7 +440,7 @@ option:not(:checked) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(to bottom, #f8a5c2 0, #596275 50%);
+    background-image: linear-gradient(to bottom, $secondary-color 0, #596275 50%);
     opacity: .9;
     padding: 7rem 0;
     position: relative;
