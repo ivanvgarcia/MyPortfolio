@@ -1,0 +1,48 @@
+// COLORS
+$primary-color: #00BCD4;
+$primary-color-light: rgb(2, 218, 246);
+$primary-color-dark: #0B58E1;
+$secondary-color: #0CEBC7;
+$secondary-color-dark: #0BE182;
+$grey-color: #596275;
+$grey-color-dark: #272727;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(desktop) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px calc(100vh - 100px);
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $grey-color-dark;
+    box-sizing: border-box;
+}
+
+header {
+    grid-column: 1 / -1;
+}
+
+.container {
+    max-width: 145rem;
+    margin: 0 auto;
+}

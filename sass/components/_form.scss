@@ -1,0 +1,117 @@
+input[type="text"],
+input[type="email"],
+select,
+    {
+    font-family: inherit;
+    color: inherit;
+    font-size: 2rem;
+    height: 4rem;
+    padding: .7rem;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: .2rem solid $secondary-color;
+    width: 100%;
+}
+
+input[type="submit"] {
+    font-family: inherit;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: $secondary-color;
+}
+
+textarea {
+    border: none;
+    border-bottom: .2rem solid $secondary-color;
+    width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 .2rem .2rem rgba(#000, .1);
+    border-bottom: .2rem solid $primary-color;
+}
+
+input:required {
+    box-shadow: none;
+}
+
+input:focus:invalid {
+    border-bottom: solid .2rem #f38429;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+option:not(:checked) {
+    color: $grey-color-dark;
+    /* prevent <option>s from becoming transparent as well */
+}
+
+.contact-form {
+    background-color: white;
+    border-radius: .5rem;
+    padding: 5rem;
+    box-shadow: 0 .5rem .5rem rgba(49, 14, 14, 0.3);
+
+    @include respond(phone) {
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &__label {
+        margin-right: 2rem;
+        font-size: 2rem;
+
+        @include respond(phone) {
+            color: #fff;
+            font-size: 2.7rem;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 40% 65%;
+        align-items: center;
+        font-size: 2.3rem;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            text-align: center;
+        }
+    }
+
+    &__select {}
+
+    &__btn {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+}
+
+.form-messages {
+    width: 70%;
+    margin: 0 auto;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.success {
+    background-color: $secondary-color;
+}
+
+.error {
+    background-color: #f38429
+}

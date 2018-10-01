@@ -1,0 +1,51 @@
+.main-nav {
+    grid-column: 1 / -1;
+    text-transform: uppercase;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        align-items: center;
+        margin: 0 10rem;
+        padding-top: 2rem;
+        opacity: 0;
+        transform: translateY(-40px);
+        animation: fadein 1s forwards;
+
+        @include respond(phone) {
+            margin: 0 3rem;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+        cursor: pointer;
+
+        @include respond(phone) {
+            width: 6.5rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        border: 2px solid $primary-color;
+        border-radius: 3rem;
+        color: $primary-color;
+        padding: 1.3rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: all 0.1s ease-in;
+
+        @include respond(phone) {
+            border: 1px solid $primary-color;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__link:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}

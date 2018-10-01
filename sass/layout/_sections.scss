@@ -1,0 +1,48 @@
+.project-section {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10rem auto;
+    padding: 0 5rem;
+
+    @include respond(desktop) {
+        margin: 10rem 6rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(tab-port) {
+        justify-content: space-between;
+        margin: 10rem 7rem;
+        grid-gap: 7rem;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 95%;
+        padding: 0;
+        margin: 8rem 0;
+        justify-content: center;
+    }
+}
+
+.section-contact {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, $secondary-color 0, #596275 50%);
+    opacity: .9;
+    padding: 7rem 0;
+    position: relative;
+
+    &__header {
+        font-size: 4rem;
+        font-weight: 100;
+        color: #fff;
+        margin-bottom: 5rem;
+
+        @include respond(phone) {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+}
