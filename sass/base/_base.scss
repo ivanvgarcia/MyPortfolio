@@ -28,18 +28,23 @@ html {
 }
 
 body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100px calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
     font-family: "Quattrocento Sans", sans-serif;
     font-size: 1.6rem;
     line-height: 1.7;
     color: $grey-color-dark;
     box-sizing: border-box;
+
+    @supports (display: grid) {
+        // display: grid;
+        // grid-template-columns: repeat(12, 1fr);
+        // grid-template-rows: 100px calc(100vh - 100px);
+    }
 }
 
 header {
-    grid-column: 1 / -1;
+    //grid-column: 1 / -1;
 }
 
 .container {

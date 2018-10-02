@@ -1,5 +1,5 @@
 .portfolio {
-    grid-column: 1 / -1;
+    // grid-column: 1 / -1;
 
     &__header {
         display: flex;
@@ -8,12 +8,12 @@
         background-image: linear-gradient(115deg, $primary-color 0, $primary-color 50%, $grey-color 50%);
         padding: 5rem 0;
 
-        @supports(display: grid) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-items: center;
-            align-items: center;
-        }
+        // @supports(display: grid) {
+        //     display: grid;
+        //     grid-template-columns: repeat(2, 1fr);
+        //     justify-items: center;
+        //     align-items: center;
+        // }
 
         @include respond(desktop) {
             background-image: linear-gradient(105deg, $primary-color 0, $primary-color 50%, $grey-color 50%);
@@ -26,7 +26,7 @@
 
         @include respond(phone) {
             @supports(display: grid) {
-                grid-template-columns: 1fr;
+                // grid-template-columns: 1fr;
             }
 
             flex-direction: column;

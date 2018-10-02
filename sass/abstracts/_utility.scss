@@ -1,3 +1,21 @@
 .u-margin-top-bottom {
     margin: 4rem 0;
 }
+
+.no-margin-right {
+    @supports not (display: grid) {
+        margin: 0 !important;
+    }
+
+    @include respond(desktop) {
+        @supports not (display: grid) {
+            margin: 0 !important;
+        }
+    }
+
+    @include respond(tab-port) {
+        @supports not (display: grid) {
+            margin: 0 !important;
+        }
+    }
+}

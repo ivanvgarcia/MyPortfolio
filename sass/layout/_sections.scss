@@ -1,31 +1,49 @@
 .project-section {
-    display: grid;
-    grid-gap: 5rem;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 10rem auto;
     padding: 0 5rem;
 
+
+    @supports(display: grid) {
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     @include respond(desktop) {
         margin: 10rem 6rem;
-        grid-template-columns: repeat(2, 1fr);
+
+        @supports(display: grid) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     @include respond(tab-port) {
-        justify-content: space-between;
+        justify-content: center;
         margin: 10rem 7rem;
-        grid-gap: 7rem;
+
+        @supports(display: grid) {
+            grid-gap: 7rem;
+            justify-content: space-between;
+        }
+
     }
 
     @include respond(phone) {
-        grid-template-columns: 95%;
         padding: 0;
-        margin: 8rem 0;
+        margin: 14rem 0;
         justify-content: center;
+
+        @supports(display: grid) {
+            grid-template-columns: 100%;
+        }
     }
 }
 
 .section-contact {
-    grid-column: 1 / -1;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +51,10 @@
     opacity: .9;
     padding: 7rem 0;
     position: relative;
+
+    @supports(display: grid) {
+        grid-column: 1 / -1;
+    }
 
     &__header {
         font-size: 4rem;
