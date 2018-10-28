@@ -82,6 +82,39 @@
         </div>
 
         <div class="project-section container">
+
+            <div class="card">
+                <div class="card-side">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-node"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="card__image">
+                    <img src="img/project-1.jpg" alt="journal">
+                </div>
+
+                <div class="card__information">
+                    <div class="card__header">
+                        <h3 class="card__title">
+                            Developer Connector
+                        </h3>
+                    </div>
+                    <div class="card__description">
+                        A full stack website using MongoDB and the react library with redux. Users can sign up and
+                        login, create a profile, and add their experiences and education.
+                    </div>
+                    <div class="card__links">
+                        <a href="//github.com/ivanvgarcia/dev-connector" target="_blank"><i class="fab fa-github"></i>
+                        </a>
+                        <a href="//radiant-reaches-86758.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-side">
                     <i class="fab fa-html5"></i>
@@ -94,6 +127,7 @@
                 <div class="card__image">
                     <img src="img/project-9.png" alt="journal">
                 </div>
+
                 <div class="card__information">
                     <div class="card__header">
                         <h3 class="card__title">
@@ -147,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="card no-margin-right">
+            <div class="card no-margin-right card-featured">
                 <div class="card-side">
                     <i class="fab fa-html5"></i>
                     <i class="fab fa-css3"></i>
@@ -166,7 +200,7 @@
                     </div>
                     <div class="card__description">
                         <p>Full stack website using Node.js and the express framework with EJS as the templating
-                            language and Semantic UI as the Front End Framework. I
+                            language. I
                             created this website to share blog posts with my students on various English topics related
                             to their industry.</p>
                     </div>

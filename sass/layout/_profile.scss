@@ -5,7 +5,7 @@
     min-height: calc(100vh - 100px);
 
     @supports(display: grid) {
-        //grid-column: 1 / -1;
+        grid-column: 1 / -1;
     }
 
     @include respond(phone) {
@@ -23,16 +23,36 @@
     &__image img {
         width: 25vw;
 
+        @supports not(display: grid) {
+            margin: 0 auto;
+            width: 50%;
+        }
+
         @include respond(desktop) {
             width: 35vw;
+
+            @supports not(display: grid) {
+                margin: 0 auto;
+                width: 50%;
+            }
         }
 
         @include respond(tab-port) {
             width: 40vw;
+
+            @supports not(display: grid) {
+                margin: 0 auto;
+                width: 65%;
+            }
         }
 
         @include respond(phone) {
             width: 70vw;
+
+            @supports not(display: grid) {
+                margin: 0 auto;
+                width: 80%;
+            }
         }
     }
 
